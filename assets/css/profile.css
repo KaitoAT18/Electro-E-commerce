@@ -1,0 +1,171 @@
+/* Profile Sidebar */
+.profile-sidebar {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.profile-userpic {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.profile-userpic img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #d10024;
+}
+
+.profile-usertitle {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.profile-usertitle-name {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.profile-usermenu {
+    margin-top: 20px;
+}
+
+.profile-usermenu ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.profile-usermenu ul li {
+    border-bottom: 1px solid #f0f4f7;
+}
+
+.profile-usermenu ul li:last-child {
+    border-bottom: none;
+}
+
+.profile-usermenu ul li a {
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 20px;
+    display: block;
+}
+
+.profile-usermenu ul li.active a,
+.profile-usermenu ul li a:hover {
+    background-color: #f6f9fb;
+    color: #d10024;
+    border-left: 3px solid #d10024;
+    text-decoration: none;
+}
+
+.profile-usermenu ul li a i {
+    margin-right: 8px;
+    font-size: 14px;
+}
+
+.change-photo-btn {
+    margin-top: 10px;
+    font-size: 12px;
+    padding: 5px 10px;
+}
+
+/* Order statistics */
+.stats-row {
+    margin-bottom: 20px;
+}
+
+.stat-box {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.stat-box h4 {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.stat-box p {
+    margin: 5px 0 0;
+    color: #777;
+}
+
+.stat-box.total h4 {
+    color: #2196f3;
+}
+
+.stat-box.pending h4 {
+    color: #ff9800;
+}
+
+.stat-box.completed h4 {
+    color: #4caf50;
+}
+
+.stat-box.cancelled h4 {
+    color: #f44336;
+}
+
+/* Order status */
+.order-status {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-left: 10px;
+    font-weight: 500;
+}
+
+.order-status.pending {
+    background-color: #fff3e0;
+    color: #e65100;
+}
+
+.order-status.processing {
+    background-color: #e3f2fd;
+    color: #0277bd;
+}
+
+.order-status.shipped {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.order-status.delivered {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.order-status.cancelled {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+.order-col {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+
+.view-btn {
+    margin-left: 15px;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+/* Alert message */
+.alert-message {
+    margin-bottom: 20px;
+}

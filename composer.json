@@ -1,0 +1,13 @@
+{
+    "name": "lehoangmcinh/shoppingweb",
+    "type": "library",
+    "authors": [
+        {
+            "name": "lehoangminh"
+        }
+    ],
+    "require": {
+        "firebase/php-jwt": "^6.11",
+        "phpmailer/phpmailer": "^6.10"
+    }
+}

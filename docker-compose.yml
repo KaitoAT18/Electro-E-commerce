@@ -1,0 +1,43 @@
+version: "3"
+
+services:
+    # PHP + Apache Service
+    app:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        container_name: shopping_web_app
+        restart: always
+        ports:
+            - "8080:80"
+        volumes:
+            - ./assets/images/uploads:/var/www/html/assets/images/uploads
+        depends_on:
+            - mysql
+        environment:
+            - DB_HOST=mysql
+            - DB_PORT=3306
+            - DB_NAME=shopping_web
+            - DB_USER=root
+            - DB_PASS=password
+            - DB_CHARSET=utf8mb4
+            - JWT_SECRET_KEY=6ac4edd322fedbbac4a7245623ae71b24e874de76068e1ed826a7ec0044376c5
+            - BASE_URL=http://localhost:8080
+            - APP_NAME=Electro
+
+    # MySQL Service
+    mysql:
+        image: mysql:8.0
+        container_name: shopping_web_mysql
+        restart: always
+        ports:
+            - "3306:3306"
+        volumes:
+            - shopping_web_mysql_data:/var/lib/mysql
+            - ./sql/shopping_web.sql:/docker-entrypoint-initdb.d/shopping_web.sql
+        environment:
+            - MYSQL_ROOT_PASSWORD=password
+            - MYSQL_DATABASE=shopping_web
+
+volumes:
+    shopping_web_mysql_data:

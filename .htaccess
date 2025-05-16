@@ -1,0 +1,17 @@
+# Chặn liệt kê thư mục
+Options -Indexes
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+  
+    # Các request đến /public/ trực tiếp
+    RewriteRule ^public/index\.php$ public/index.php [L]
+    RewriteRule ^public/(.*)$ public/$1 [L]
+    
+    # Các request cho assets
+    RewriteRule ^assets/(.*)$ assets/$1 [L]
+    
+    # Các request đến thư mục gốc đưa về index.php trong public
+    RewriteRule ^$ public/index.php [L]
+    RewriteRule ^index\.php$ public/index.php [L]
+</IfModule>

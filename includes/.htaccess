@@ -1,0 +1,29 @@
+# Chặn tất cả truy cập trực tiếp đến thư mục này
+
+<IfModule mod_authz_core.c>
+    Require all denied
+</IfModule>
+
+# Cho Apache phiên bản cũ
+
+<IfModule !mod_authz_core.c>
+Deny from all
+</IfModule>
+
+# Chặn liệt kê thư mục
+
+Options -Indexes
+
+# Ngăn truy cập file PHP
+
+<FilesMatch "\.php$">
+Order Allow,Deny
+Deny from all
+</FilesMatch>
+
+# Chặn xem source
+
+<Files ~ "\.(php|inc|html)$">
+Order allow,deny
+Deny from all
+</Files>
