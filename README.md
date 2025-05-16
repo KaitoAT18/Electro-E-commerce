@@ -4,7 +4,8 @@
 
 -   [Giới thiệu](#giới-thiệu)
 -   [Yêu cầu hệ thống](#yêu-cầu-hệ-thống)
--   [Cài đặt](#cài-đặt)
+-   [Cài đặt bằng XAMPP](#cài-đặt)
+-   [Cài đặt bằng Docker](#cài-đặt-bằng-docker)
 -   [Tài khoản demo](#tài-khoản-demo)
 
 ## Giới thiệu
