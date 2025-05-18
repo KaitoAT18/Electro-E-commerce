@@ -36,13 +36,13 @@ Electro là một hệ thống thương mại điện tử được xây dựng 
 
 ### 3. Cấu hình cơ sở dữ liệu
 
-1. Truy cập vào [phpMyAdmin](http://localhost/phpmyadmin).
-2. Tạo cơ sở dữ liệu mới có tên `shopping_web` với collaction `utf8mb4_unicode_ci`.
-3. Import file SQL:
+-  Truy cập vào [phpMyAdmin](http://localhost/phpmyadmin).
+- Tạo cơ sở dữ liệu mới có tên `shopping_web` với collaction `utf8mb4_unicode_ci`.
+- Import file SQL:
     - Mở tab "Import" trong **phpMyAdmin**.
     - Chọn file `sql/shopping_web.sql` từ thư mục của dự án.
     - Nhấn "Go".
-4. Cấu hình môi trường
+- Cấu hình môi trường
     - Tạo file `.env` từ file mẫu `.env.example`.
     - Chỉnh sửa file `.env` để điều chỉnh các thông số cấu hình phù hợp.
 
@@ -64,7 +64,7 @@ Electro là một hệ thống thương mại điện tử được xây dựng 
     docker-compose up -d
     ```
 ### 4. Truy cập trang web
-- Sau khi khởi động dịch vụ thành công, có thể truy cập vào website ở địa chỉ `http://localhost:8080/public/"
+- Sau khi khởi động dịch vụ thành công, có thể truy cập vào website ở địa chỉ `http://localhost:8080/public/`.
 
 ## Tài khoản demo
 
