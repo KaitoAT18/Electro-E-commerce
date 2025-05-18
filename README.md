@@ -57,12 +57,14 @@ Electro là một hệ thống thương mại điện tử được xây dựng 
 
 -   Clone dự án từ Github: `git clone https://github.com/KaitoAT18/Electro-E-commerce.git`.
 
-### 3. Khỏi động dịch vụ
+### 3. Khởi động dịch vụ
 
 -   Vào thư mục dự án và chạy lệnh sau để khởi động dịch vụ:
     ```bash
     docker-compose up -d
     ```
+### 4. Truy cập trang web
+- Sau khi khởi động dịch vụ thành công, có thể truy cập vào website ở địa chỉ `http://localhost:8080/public/"
 
 ## Tài khoản demo
 
