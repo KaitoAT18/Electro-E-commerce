@@ -43,8 +43,8 @@ Electro là một hệ thống thương mại điện tử được xây dựng 
     - Chọn file `sql/shopping_web.sql` từ thư mục của dự án.
     - Nhấn "Go".
 4. Cấu hình môi trường
-    1. Tạo file `.env` từ file mẫu `.env.example`.
-    2. Chỉnh sửa file `.env` để điều chỉnh các thông số cấu hình phù hợp.
+    - Tạo file `.env` từ file mẫu `.env.example`.
+    - Chỉnh sửa file `.env` để điều chỉnh các thông số cấu hình phù hợp.
 
 ## Cài đặt bằng Docker
 
