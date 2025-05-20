@@ -22,6 +22,13 @@ services:
             - DB_PASS=password
             - DB_CHARSET=utf8mb4
             - JWT_SECRET_KEY=6ac4edd322fedbbac4a7245623ae71b24e874de76068e1ed826a7ec0044376c5
+            - MAIL_HOST = smtp.gmail.com
+            - MAIL_PORT = 587
+            - MAIL_USERNAME = mle46641@gmail.com
+            - MAIL_PASSWORD = xjclddnvctgwqnul
+            - MAIL_ENCRYPTION = tls
+            - MAIL_FROM_ADDRESS = mle46641@gmail.com
+            - MAIL_FROM_REPLY_TO = mle46641@gmail.com
             - BASE_URL=http://localhost:8080
             - APP_NAME=Electro
 
