@@ -30,18 +30,6 @@ function send_email($to, $subject, $body, $altBody = '', $attachments = [])
         $mail->SMTPSecure = getenv('MAIL_ENCRYPTION');
         $mail->Port = getenv('MAIL_PORT'); // Cổng SMTP (587 cho TLS, 465 cho SSL)
 
-        // Bật chế độ debug - comment dòng này khi triển khai production
-        $mail->SMTPDebug = 2; // 0: tắt, 1: chỉ hiện lỗi, 2: hiện đầy đủ
-
-        // Debug output sẽ được ghi vào file log
-        $mail->Debugoutput = function ($str, $level) use ($logFile) {
-            file_put_contents(
-                $logFile,
-                date('Y-m-d H:i:s') . " [$level]: $str\n",
-                FILE_APPEND
-            );
-        };
-
         // Cấu hình người gửi và người nhận
         $mail->setFrom(getenv('MAIL_FROM_ADDRESS'), 'Electro Shop');
         $mail->addAddress($to);
@@ -64,23 +52,9 @@ function send_email($to, $subject, $body, $altBody = '', $attachments = [])
         // Gửi email
         $mail->send();
 
-        // Ghi log thành công
-        file_put_contents(
-            $logFile,
-            date('Y-m-d H:i:s') . " [SUCCESS]: Email sent to $to\n",
-            FILE_APPEND
-        );
-
         return ['success' => true, 'message' => 'Email sent successfully'];
 
     } catch (Exception $e) {
-        // Ghi log lỗi
-        file_put_contents(
-            $logFile,
-            date('Y-m-d H:i:s') . " [ERROR]: " . $mail->ErrorInfo . "\n",
-            FILE_APPEND
-        );
-
         return ['success' => false, 'message' => $mail->ErrorInfo];
     }
 }
